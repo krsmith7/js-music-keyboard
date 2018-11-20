@@ -1,16 +1,16 @@
 $(document).ready( function() {
-  // your code here
-  // const keys = []
-  // const note = $(this.html)
-  // $('.note c').click
+    // Play note by button
+    $('.instrument').on('click', 'button',
+    function() {
+      const note = $(this).html();
+      // console.log(`played ${note}`);
+    $(`#${note}Audio`)[0].play();
+   });
 
-  // $('body').click(function(event))
-   // $('.instrument').on('click', 'button', function(event) {
-      $('.instrument').on('click', 'button',
-      function() {
-        const note = $(this).html();
-        // console.log(`played ${note}`);
-        $(`#${note}Audio`)[0].play();
-   }
- );
+   // Play note by letter key pressed
+   $('body').keydown(function(event) {
+      const note = event.key
+     $(`#${note}Audio`)[0].play();
+   });
+
 });
