@@ -9,11 +9,8 @@ $(document).ready( function() {
       $('.instrument').on('click', 'button',
       function() {
         const note = $(this).html();
-        console.log(`played ${note}`);
+        // console.log(`played ${note}`);
         $(`#${note}Audio`)[0].play();
    }
  );
-
- $
-
 });
