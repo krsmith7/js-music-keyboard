@@ -1,10 +1,9 @@
 $(document).ready( function() {
-    // Play note by button
-    $('.instrument').on('click', 'button',
-    function() {
+    // Play note by onscreen note button
+    $('.instrument').on('click', 'button', function() {
       const note = $(this).html();
       // console.log(`played ${note}`);
-    $(`#${note}Audio`)[0].play();
+      $(`#${note}Audio`)[0].play();
    });
 
    // Play note by letter key pressed
